@@ -11,6 +11,7 @@ const Template = () => `
 <button id="themecolor-btn">Cambia el color!</button>
 <button id="logout-btn">Cerrar sesión</button>
 <button id="start-btn">Volver a inicio</button>
+<button id="poke">PokeApi</button>
 <h1>Bienvenido ${localStorage.getItem (["user"])}</h1>
 <div class="games-container"></div>
 </div>
@@ -26,6 +27,8 @@ const addListeners =()=>{
     .addEventListener("click", ()=>{
         initContent("Login");
     });
+    document.querySelector("#poke")
+    .addEventListener("click", ()=>initContent("PokeAPI"));
 }
 
 export const printTemplate =()=>{
