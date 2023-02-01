@@ -8,7 +8,6 @@ import { initContent } from "../../main";
 
 const Template = () => `
 <div class="hub-container">
-<button id="themecolor-btn">Cambia el color!</button>
 <button id="logout-btn">Cerrar sesión</button>
 <button id="start-btn">Volver a inicio</button>
 <button id="poke">PokeApi</button>
