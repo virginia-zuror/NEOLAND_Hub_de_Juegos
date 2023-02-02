@@ -1,0 +1,10 @@
+.nav-container{
+display: flex;
+justify-content: right;
+align-items: center;
+height: 100%;
+width: 100%;
+padding-right: 2rem;
+gap:2rem;
+
+}
