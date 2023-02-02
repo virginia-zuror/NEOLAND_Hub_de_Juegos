@@ -1,13 +1,13 @@
 import "./PokeAPI.css";
 let allCharactersPoke=[];
-
+let allPokemons=[];
 
 const Template = () =>`
 <div id="poke-container">
 <section id="cards"></section>
 </div>`
 
-let allPokemons=[];
+
 const getPokemons = async () => {
     
     for(let i=1; i<152; i++){
@@ -16,20 +16,29 @@ const getPokemons = async () => {
     
     allPokemons.push(data); 
     }
-   printPokemons(allPokemons);
+   mapPokemons(allPokemons);
   
 }
+
+const mapPokemons = (allPokemons) =>{
+    allCharactersPoke = allPokemons.map((pokemon) =>({
+        name : pokemon.name,
+        experience : pokemon.base_experience,
+    }));
+    
+    printPokemons(allCharactersPoke);
+};
 
   
 
 const printPokemons =(pokemons)=>{
 
-    for (const pokemon of allPokemons) {
+    for (const pokemon of allCharactersPoke) {
         const figure = document.createElement("figure");
         const name = document.createTextNode(` Name: ${pokemon.name}`)
-        const type = document.createTextNode(`Type: ${pokemon.types.type}`)
+        const exp = document.createTextNode(`Exp points: ${pokemon.experience}`)
         figure.appendChild(name);
-        figure.appendChild(type);
+        figure.appendChild(exp);
         document.querySelector("#cards").appendChild(figure);
 
     }
@@ -41,7 +50,7 @@ const addListeners =()=>{
         initContent("Hub");
     });
 }
-
+ 
 export const printTemplate = ()=>{
     document.querySelector("#dashboard").innerHTML = Template();
     getPokemons();
