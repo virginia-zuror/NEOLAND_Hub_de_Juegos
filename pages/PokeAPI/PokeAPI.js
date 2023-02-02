@@ -1,26 +1,35 @@
 import "./PokeAPI.css";
-
-import axios from "axios";
-import { initContent } from "../../main";
+let allCharactersPoke=[];
 
 
 const Template = () =>`
 <div id="poke-container">
-<button id="start-btn">Volver a Hub</button>
 <section id="cards"></section>
 </div>`
 
-
-
-const getPokemons =()=>{
-    axios.get("https://pokeapi.co/api/v2/pokemon?limit=150&offset=0").then(data => printPokemons(data.data.results));
+let allPokemons=[];
+const getPokemons = async () => {
+    
+    for(let i=1; i<152; i++){
+    const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
+    const data = await res.json();
+    
+    allPokemons.push(data); 
+    }
+   printPokemons(allPokemons);
+  
 }
+
+  
+
 const printPokemons =(pokemons)=>{
 
-    for (const pokemon of pokemons) {
+    for (const pokemon of allPokemons) {
         const figure = document.createElement("figure");
-        const name = document.createTextNode(` Nombre: ${pokemon.name}`)//de momento funciona falta extraer los datos de la url de cada pokemon, imagen y algo mas y diseñar las cartas.
+        const name = document.createTextNode(` Name: ${pokemon.name}`)
+        const type = document.createTextNode(`Type: ${pokemon.types.type}`)
         figure.appendChild(name);
+        figure.appendChild(type);
         document.querySelector("#cards").appendChild(figure);
 
     }
@@ -37,4 +46,4 @@ export const printTemplate = ()=>{
     document.querySelector("#dashboard").innerHTML = Template();
     getPokemons();
     addListeners();
-}
+} 

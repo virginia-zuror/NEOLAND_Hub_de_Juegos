@@ -24,10 +24,12 @@
     caret-color: whitesmoke;
     color: whitesmoke;
     height: 30px;
+    font-size: 20px;
 }
 
 .login > form >#userName:focus{
     outline: none;
+    
 }
 .login > form > .login-btn {
     border: whitesmoke solid 2px;

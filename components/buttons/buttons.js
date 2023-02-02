@@ -16,7 +16,7 @@ const addListeners =()=>{
     });
     document.querySelector("#start-btn")
     .addEventListener("click", ()=>{
-        initContent("Login");
+        initContent("Hub");
     });//solo los init content el color theme lo enviamos a parte en la funcion export
     
 }
