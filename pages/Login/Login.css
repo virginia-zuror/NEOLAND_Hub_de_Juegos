@@ -1,15 +1,20 @@
 .login{
     display: flex;
     flex-direction: column;
-    gap: 96px;
+    gap: 80px;
     align-items: center;
     justify-content: center;
+    padding: 3rem;
+
+    
+
 }
 
 .login > h2 {
     font-size: 30px;
-    font-weight: 500;
-    color: rgba(245, 245, 245, 0.525);
+    font-weight: 700;
+    color: yellow;
+    text-shadow: 0 0 30px black;
 }
 .login > form{
     display: flex;
@@ -20,9 +25,9 @@
 .login > form > #userName{
     background-color: transparent;
     border: none;
-    border-bottom: 2px whitesmoke solid;
-    caret-color: whitesmoke;
-    color: whitesmoke;
+    border-bottom: solid 5px yellow;
+    caret-color: yellow;
+    color: black;
     height: 30px;
     font-size: 20px;
 }
@@ -32,6 +37,7 @@
     
 }
 .login > form > .login-btn {
-    border: whitesmoke solid 2px;
-    color: whitesmoke;
+    border: yellow solid 3px;
+    color: rgb(0, 0, 0);
+    font-size: 25px;
 }

@@ -31,8 +31,8 @@ const mapPokemons = (allPokemons) =>{
 };
 
 export const printPokemons =(allCharactersPoke)=>{
-    let number= 1;
-    document.querySelector("#cards").innerHTML = "";
+   
+    
 
 
     for (const pokemon of allCharactersPoke) {
@@ -47,14 +47,14 @@ export const printPokemons =(allCharactersPoke)=>{
         figureFront.innerHTML=`
         <h1>${pokemon.name.toUpperCase()}</h1>
         <img src= ${pokemon.image} alt= "${pokemon.name} image"/>
-        `;
+        <h2>Tipo:</h2>`;
             for (const tp of pokemon.type){//mapeamos el array de types
                 const p = document.createElement("p");
                 p.innerHTML = tp.type.name;
                 figureFront.appendChild(p);
                 }
         cardInner.appendChild(figureFront);
-        number++;
+        
        
         //y ahora creamos tambien la cara tarsera de la carta.
         
@@ -63,8 +63,8 @@ export const printPokemons =(allCharactersPoke)=>{
         figureBack.setAttribute("id", `card_back`)
         figureBack.innerHTML= `
         <h1>${pokemon.name.toUpperCase()}</h1>
-        <p>${pokemon.experience}</p>
-        `;
+        <h2>Exp.points: ${pokemon.experience}</h2>
+        <h2>Habilidades:</h2>`;
             for (const ab of pokemon.ability){//mapeamos el array de abilities
                 const p = document.createElement("p");
                 p.innerHTML = ab.ability.name;
@@ -82,7 +82,7 @@ export const printPokemons =(allCharactersPoke)=>{
 export const filterByName = (value) => {
     
     const filteredPoke = allCharactersPoke.filter((pokemon) => pokemon.name.includes(value))
-        
+    console.log("hola")    
     printPokemons(filteredPoke);
     
 }

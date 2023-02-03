@@ -1,13 +1,14 @@
 .flipCard {
+  
     border-radius: 6px;
   background-color: transparent;
   width: 300px;
   height: 350px;
-  border: 1px solid #f1f1f1;
+  border: none;
   perspective: 1000px;  
 }
 .cardInner {
-    
+  border: none;  
   position: relative;
   width: 100%;
   height: 100%;
@@ -28,22 +29,48 @@
 }
 
 #card_front {
+    border: yellow 4px solid;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content:center;
     background-color: #bbbbbb72;
-    color: black;
+   
+}
+#card_front> h1{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight:800;
+  color: yellow;
+  text-shadow: 0 0 10px black;
+}
+#card_front> h2{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight:600;
 }
 #card_back {
+  border: yellow 4px solid;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content:center;
-    gap:1%;
+    gap:3%;
     background-color: rgba(255, 255, 255, 0.556);
-    color: white;
     transform: rotateY(180deg);
+}
+#card_back> h1{
+  margin-bottom: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight:800;
+  color: yellow;
+  text-shadow: 0 0 10px black;
+}
+#card_back> h2{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight:600;
 }
 #card_front > img{
     width: 200px;
