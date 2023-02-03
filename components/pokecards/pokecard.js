@@ -19,27 +19,30 @@ const mapPokemons = (allPokemons) =>{
     allCharactersPoke = allPokemons.map((pokemon) =>({
         name : pokemon.name,
         experience : pokemon.base_experience,
-        ability : pokemon.abilities[0].ability.name,
-        type : pokemon.types[0].type.name,
-              
+        height : pokemon.height,
+        weight : pokemon.weight,
+        ability : pokemon.abilities,
+        type : pokemon.types,
+        locationsEncounters : pokemon.location_area_encounters,           
     }));
-    
-    
-    printPokemons(allCharactersPoke);//mi nuevo array con los datos que me interesan se llama allCharactersPoke
+    printPokemonsFront(allCharactersPoke);//mi nuevo array con los datos que me interesan se llama allCharactersPoke
 };
 
-const printPokemons =(pokemons)=>{
+const printPokemonsFront =(pokemons)=>{
     let number= 1;
     for (const pokemon of allCharactersPoke) {
         
         const figure = document.createElement("figure");
         figure.setAttribute("id", `${pokemon.name}`)
         figure.innerHTML=`
-        <h1>${pokemon.name}</h1>
-        <h2>Puntos de exp.: ${pokemon.experience}</h2>
+        <h1>${pokemon.name.toUpperCase()}</h1>
         <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${number}.png" alt= "${pokemon.name} image"/>
-        <p>Habilidad: ${pokemon.ability}</p>`;
-      
+        `;
+      for (const tp of pokemon.type){//mapeamos el array de types
+        const p = document.createElement("p");
+        p.innerHTML = tp.type.name;
+        figure.appendChild(p);
+      }
         document.querySelector("#cards").appendChild(figure);
 
         number++;
