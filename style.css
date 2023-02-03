@@ -28,7 +28,7 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   width: 100vw;
-  height: 100vh;
+  overflow: scroll;
   transition: all 0.8s ease-in;
 }
 
@@ -59,6 +59,11 @@ align-items: center;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  object-position: bottom;
+  background-color: rgba(0, 0, 0, 0.273);
+  position: fixed;
+  bottom: 0;
+  
 }
 
 button{
