@@ -18,6 +18,7 @@ export const getPokemons = async () => {
 const mapPokemons = (allPokemons) =>{
     allCharactersPoke = allPokemons.map((pokemon) =>({
         name : pokemon.name,
+        image : pokemon.sprites.other['official-artwork'].front_default,
         experience : pokemon.base_experience,
         height : pokemon.height,
         weight : pokemon.weight,
@@ -25,12 +26,14 @@ const mapPokemons = (allPokemons) =>{
         type : pokemon.types,
         locationsEncounters : pokemon.location_area_encounters,           
     }));
-    printPokemonsFront(allCharactersPoke);//mi nuevo array con los datos que me interesan se llama allCharactersPoke
-    
+    printPokemons(allCharactersPoke);//mi nuevo array con los datos que me interesan se llama allCharactersPoke
+   
 };
 
-const printPokemonsFront =(allCharactersPoke)=>{
+export const printPokemons =(allCharactersPoke)=>{
     let number= 1;
+    document.querySelector("#cards").innerHTML = "";
+
 
     for (const pokemon of allCharactersPoke) {
         const flipCard = document.createElement("div");
@@ -43,7 +46,7 @@ const printPokemonsFront =(allCharactersPoke)=>{
         figureFront.setAttribute("id", `card_front`)
         figureFront.innerHTML=`
         <h1>${pokemon.name.toUpperCase()}</h1>
-        <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${number}.png" alt= "${pokemon.name} image"/>
+        <img src= ${pokemon.image} alt= "${pokemon.name} image"/>
         `;
             for (const tp of pokemon.type){//mapeamos el array de types
                 const p = document.createElement("p");
@@ -71,7 +74,18 @@ const printPokemonsFront =(allCharactersPoke)=>{
        flipCard.appendChild(cardInner);
        document.querySelector("#cards").appendChild(flipCard);
     }
+    
 };
+
+//creamos un buscador por nombre del bicho
+
+export const filterByName = (value) => {
+    
+    const filteredPoke = allCharactersPoke.filter((pokemon) => pokemon.name.includes(value))
+        
+    printPokemons(filteredPoke);
+    
+}
 
    
 
