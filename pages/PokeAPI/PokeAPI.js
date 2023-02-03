@@ -1,6 +1,8 @@
 import "./PokeAPI.css";
-let allCharactersPoke=[];
-let allPokemons=[];
+
+import { getPokemons } from "../../components/pokecards/pokecard";
+
+
 
 const Template = () =>`
 <div id="poke-container">
@@ -16,7 +18,7 @@ const Template = () =>`
 </div>`
 
 
-const getPokemons = async () => {
+/* const getPokemons = async () => {
     
     for(let i=1; i<152; i++){
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
@@ -38,12 +40,12 @@ const mapPokemons = (allPokemons) =>{
     }));
     
     
-    printPokemons(allCharactersPoke);
-};
+    printPokemons(allCharactersPoke);//mi nuevo array con los datos que me interesan se llama allCharactersPoke
+}; */
 
   
-
-const printPokemons =(pokemons)=>{
+//esta funcion es la carta del bicho, la dejo comentada para probar a crearla en otro js como compoennte y dejar este mas limpio
+/* const printPokemons =(pokemons)=>{
     let number= 1;
     for (const pokemon of allCharactersPoke) {
         
@@ -59,7 +61,7 @@ const printPokemons =(pokemons)=>{
 
         number++;
     }
-}
+} */
 
 const filterByName =()=>{//pendiente no encuentra
     const inputName = document.querySelector("#inputName");
@@ -71,7 +73,7 @@ const filterByName =()=>{//pendiente no encuentra
     });
     
 };
-}
+} 
 
     
 
@@ -90,6 +92,7 @@ const addListeners =()=>{
 export const printTemplate = ()=>{
     document.querySelector("#dashboard").innerHTML = Template();
     getPokemons();
+    filterByName();
     addListeners();
     
 } 
