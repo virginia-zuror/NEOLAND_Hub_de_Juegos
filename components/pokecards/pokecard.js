@@ -26,26 +26,56 @@ const mapPokemons = (allPokemons) =>{
         locationsEncounters : pokemon.location_area_encounters,           
     }));
     printPokemonsFront(allCharactersPoke);//mi nuevo array con los datos que me interesan se llama allCharactersPoke
+    
 };
 
-const printPokemonsFront =(pokemons)=>{
+const printPokemonsFront =(allCharactersPoke)=>{
     let number= 1;
+
     for (const pokemon of allCharactersPoke) {
-        
-        const figure = document.createElement("figure");
-        figure.setAttribute("id", `${pokemon.name}`)
-        figure.innerHTML=`
+        const flipCard = document.createElement("div");
+            flipCard.setAttribute("class", "flipCard");
+        const cardInner = document.createElement("div");
+            cardInner.setAttribute("class", "cardInner");
+        //creamos la parte frontal de las cartas
+
+        const figureFront = document.createElement("figure");
+        figureFront.setAttribute("id", `card_front`)
+        figureFront.innerHTML=`
         <h1>${pokemon.name.toUpperCase()}</h1>
         <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${number}.png" alt= "${pokemon.name} image"/>
         `;
-      for (const tp of pokemon.type){//mapeamos el array de types
-        const p = document.createElement("p");
-        p.innerHTML = tp.type.name;
-        figure.appendChild(p);
-      }
-        document.querySelector("#cards").appendChild(figure);
-
+            for (const tp of pokemon.type){//mapeamos el array de types
+                const p = document.createElement("p");
+                p.innerHTML = tp.type.name;
+                figureFront.appendChild(p);
+                }
+        cardInner.appendChild(figureFront);
         number++;
+       
+        //y ahora creamos tambien la cara tarsera de la carta.
+        
+        
+        const figureBack = document.createElement("figure");
+        figureBack.setAttribute("id", `card_back`)
+        figureBack.innerHTML= `
+        <h1>${pokemon.name.toUpperCase()}</h1>
+        <p>${pokemon.experience}</p>
+        `;
+            for (const ab of pokemon.ability){//mapeamos el array de abilities
+                const p = document.createElement("p");
+                p.innerHTML = ab.ability.name;
+                figureBack.appendChild(p);
+            }
+       cardInner.appendChild(figureBack); 
+       flipCard.appendChild(cardInner);
+       document.querySelector("#cards").appendChild(flipCard);
     }
-}
+};
+
+   
+
+
+
+
 
