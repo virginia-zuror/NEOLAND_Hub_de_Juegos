@@ -33,6 +33,7 @@ const mapPokemons = (allPokemons) =>{
 
 export const printPokemons =(allCharactersPoke)=>{
    
+
     for (const pokemon of allCharactersPoke) {
         const flipCard = document.createElement("div");
             flipCard.setAttribute("class", "flipCard");
@@ -79,10 +80,33 @@ export const printPokemons =(allCharactersPoke)=>{
 //creamos un buscador por nombre del bicho
 
 export const filter = (value) => {
-    
+    console.log(value)
     const filteredPokeName = allCharactersPoke.filter((pokemon) => pokemon.name.includes(value))
         printPokemons(filteredPokeName)
 }
+
+
+export const filterType = (value) =>{
+    
+    let filteredPokeType = []   
+    if(value != "select"){    
+        for (const pokemon of  allCharactersPoke) {
+            pokemon.type.forEach(element => {
+                if(element.type.name.includes(value)){      
+                filteredPokeType.push(pokemon)
+                }
+            });        
+        }
+    printPokemons(filteredPokeType);  
+    }else{
+        printPokemons(allCharactersPoke);
+    }  
+}
+        
+       
+
+
+
 
     
 

@@ -7,9 +7,6 @@ import { printTemplate as HubTemplate } from "./pages/Hub/Hub";
 import { printTemplate as pokeApiTemplate } from "./pages/PokeAPI/PokeAPI";
 
 
-colorTemplate();
-
-
 export const initContent =(route)=>{
     switch (route) {
        
@@ -29,7 +26,14 @@ export const initContent =(route)=>{
 
 }
 
-//llamamos solo a la pagina de login que quiero que entre por defecto
-
-LoginTemplate();
+const initPage =()=>{
+    colorTemplate();
+if(localStorage.getItem("user")){
+    HubTemplate();
+}else{
+    LoginTemplate();
+}
 FooterContent();
+}
+initPage();
+

@@ -1,20 +1,27 @@
 
 #poke-container{
-    max-width: 90vw;
-    max-height: 100%;
+    max-width: 90%;
+    max-height: 90%;
     padding-top: 1rem;
+    margin-top: 5rem;
     display:flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    
-    
+    align-items: center;   
 }
+
+.searchers{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20%;
+}
+
 #filter_poke{
-    position: absolute;
-    top: 7rem;
     
+    top: 7rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,6 +29,7 @@
     right: 4rem;
     margin: 0.5rem;
 }
+
 #cards{
     border: none;
     overflow: hidden;
