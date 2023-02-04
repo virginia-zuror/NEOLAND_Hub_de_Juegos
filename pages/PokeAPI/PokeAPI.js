@@ -1,5 +1,5 @@
 import "./PokeAPI.css";
-import { initContent } from "../../main";
+import { initContent } from "../../main"; 
 import { getPokemons } from "../../components/pokecards/pokecard";
 import { filterByName } from "../../components/pokecards/pokecard"; 
 

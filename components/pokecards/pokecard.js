@@ -1,10 +1,10 @@
 import "./pokecard.css"
 
 let allCharactersPoke=[];
-let allPokemons=[];
+
 
 export const getPokemons = async () => {
-    
+    const allPokemons=[];
     for(let i=1; i<152; i++){
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
     const data = await res.json();
@@ -32,9 +32,6 @@ const mapPokemons = (allPokemons) =>{
 
 export const printPokemons =(allCharactersPoke)=>{
    
-    
-
-
     for (const pokemon of allCharactersPoke) {
         const flipCard = document.createElement("div");
             flipCard.setAttribute("class", "flipCard");
