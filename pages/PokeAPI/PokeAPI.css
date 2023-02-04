@@ -64,6 +64,7 @@
 #btnFilter:hover{
     box-shadow: none;
     -webkit-animation: tiembla 0.15s infinite;
+    animation: tiembla 0.15s infinite;
 
 }
 

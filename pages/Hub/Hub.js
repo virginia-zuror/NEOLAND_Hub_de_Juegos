@@ -1,5 +1,6 @@
 import "./Hub.css"
 import { initContent } from "../../main";
+import { printTemplate as navButtonsTemplate } from "../../components/navbuttons/navButtons";
 
 
 //en .games-container va la grilla de botones de juego (grid)
@@ -28,8 +29,13 @@ const addListeners =()=>{
     document.querySelector("#poke")
     .addEventListener("click", ()=>initContent("PokeAPI"));
 }
+
+
+
 export const printTemplate =()=>{
+    document.querySelector("#dashboard").innerHTML = "";
     document.querySelector("#dashboard").innerHTML = Template();
+    navButtonsTemplate();
     addListeners();
     
 }

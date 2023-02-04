@@ -39,46 +39,44 @@ body {
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 100vw;
-  height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
   transition: all 0.8s ease-in;
 }
 
 
 #nav{
-  position: fixed;
+   position: fixed; 
   z-index: 1;
   background: rgba( 255, 255, 255, 0.15 );
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 13px );
   -webkit-backdrop-filter: blur( 13px );
-
   border: 1px solid rgba( 255, 255, 255, 0.18 );
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
-  height: 10%;
-  padding-left: 2rem;
+  min-width: 100%;
+  min-height: 10%;
+  
   border-bottom: 5px solid yellow ;
   
 }
 #dashboard{
-height: 100%;
-width: 100vw;
-margin-top: 6.5%;
+ 
+min-height: 85%;
+min-width: 100%;
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
 align-items: center;
-padding-bottom: 4rem;
 
 }
 #pageInfo{
   
-  width: 100vw;
-  height: 5%;
+  min-width: 100%;
+  min-height: 5%;
   display: flex;
   justify-content: space-around;
   align-items: center;

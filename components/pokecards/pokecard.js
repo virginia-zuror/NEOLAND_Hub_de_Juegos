@@ -18,6 +18,7 @@ export const getPokemons = async () => {
 const mapPokemons = (allPokemons) =>{
     allCharactersPoke = allPokemons.map((pokemon) =>({
         name : pokemon.name,
+        number : pokemon.id,
         image : pokemon.sprites.other['official-artwork'].front_default,
         experience : pokemon.base_experience,
         height : pokemon.height,
@@ -42,6 +43,7 @@ export const printPokemons =(allCharactersPoke)=>{
         const figureFront = document.createElement("figure");
         figureFront.setAttribute("id", `card_front`)
         figureFront.innerHTML=`
+        <h2 class="number">${pokemon.number}</h2>
         <h1>${pokemon.name.toUpperCase()}</h1>
         <img src= ${pokemon.image} alt= "${pokemon.name} image"/>
         <h2>Tipo:</h2>`;
@@ -76,13 +78,14 @@ export const printPokemons =(allCharactersPoke)=>{
 
 //creamos un buscador por nombre del bicho
 
-export const filterByName = (value) => {
+export const filter = (value) => {
     
-    const filteredPoke = allCharactersPoke.filter((pokemon) => pokemon.name.includes(value))
-    console.log("hola")    
-    printPokemons(filteredPoke);
-    
+    const filteredPokeName = allCharactersPoke.filter((pokemon) => pokemon.name.includes(value))
+        printPokemons(filteredPokeName)
 }
+
+    
+
 
    
 

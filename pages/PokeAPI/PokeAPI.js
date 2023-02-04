@@ -1,7 +1,10 @@
 import "./PokeAPI.css";
 import { initContent } from "../../main"; 
 import { getPokemons } from "../../components/pokecards/pokecard";
-import { filterByName } from "../../components/pokecards/pokecard"; 
+import { filter } from "../../components/pokecards/pokecard"; 
+import { printTemplate as colorTemplate } from "../../components/buttons/buttons";
+import { printTemplate as navButtonsTemplate } from "../../components/navbuttons/navButtons";
+
 
 
 const Template = () =>`
@@ -19,16 +22,18 @@ const Template = () =>`
 
 const addListeners =()=>{
     const input = document.querySelector("#iputFilter")//necesario buscar aqui el input para pasarle el valor al llamar a la funcion
-    document.querySelector("#start-btn").addEventListener("click", ()=>{initContent("Hub")});
+    
     document.querySelector("#btnFilter").addEventListener("click", () =>{
         document.querySelector("#cards").innerHTML = "";
-        console.log('click')
-         filterByName(input.value)} );
+        filter(input.value)} );
+    
 }
     
 export const printTemplate = ()=>{
-    document.querySelector("#dashboard").innerHTML = Template();
+    document.querySelector("#dashboard").innerHTML ="";
+    document.querySelector("#dashboard").innerHTML += Template()
+    navButtonsTemplate();
+    colorTemplate();
     getPokemons();
-    addListeners();
-    
+    addListeners();   
 } 
