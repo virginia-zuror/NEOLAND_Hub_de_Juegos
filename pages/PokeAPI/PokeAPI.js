@@ -38,7 +38,8 @@ const addListeners =()=>{
     
 export const printTemplate = ()=>{
     document.querySelector("#dashboard").innerHTML ="";
-    document.querySelector("#dashboard").innerHTML += Template();
+    
+    document.querySelector("#dashboard").innerHTML = Template();
     document.querySelector("#selectorType").innerHTML = selectorTypeTemplate();
     navButtonsTemplate();
     colorTemplate();

@@ -13,6 +13,7 @@ const addListeners =()=>{
     });
     document.querySelector("#start-btn")
     .addEventListener("click", ()=>{
+        console.log("click")
         initContent("Hub");
     });
 }

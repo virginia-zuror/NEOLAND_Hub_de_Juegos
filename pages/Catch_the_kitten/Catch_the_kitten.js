@@ -54,7 +54,7 @@ export const gameFunctions =()=>{
 const places = document.querySelectorAll('.place');
 const scoreTotal = document.querySelector('.score');
 const timeCounter = document.querySelector('#time');
-//const startBtn = document.querySelector('#start');
+const startBtn = document.querySelector('#start');
 
 let score = 0;
 let time = 10;
@@ -75,6 +75,7 @@ places.forEach(place => {
     let initGame = setInterval(() => { 
        places.forEach(place => {// recorremos los div place y se vacian todos al inicio del ciclo
             place.innerHTML = '';
+            startBtn.disabled = true;
         });
 
         actualPlace = Math.floor(Math.random() * 12);//se genera un indice
@@ -87,6 +88,7 @@ places.forEach(place => {
             setTimeout(() => {//el alert empieza a contar al inicio del juego pero tarda 10seg en sacar el alert, que es lo qu epodemos jugar
                 alert(`Fin de la partida, has conseguido ${score} puntos!! refresca la página para otra partida!`);
                 time=10;
+                startBtn.disabled=false;
             }, 100);
         }
     }, 1000);

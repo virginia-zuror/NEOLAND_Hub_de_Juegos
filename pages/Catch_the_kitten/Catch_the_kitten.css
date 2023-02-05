@@ -65,11 +65,12 @@
     gap:5rem;
    
 }
-.startBtn , .ressetBtn{
+.startBtn{
     color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.255);
     font-size: 30px;
 }
+
 .score , #time{
     font-size: 25px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
