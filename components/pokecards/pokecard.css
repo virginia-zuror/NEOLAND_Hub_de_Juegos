@@ -1,13 +1,16 @@
-.flipCard {
-  
-    border-radius: 6px;
+#flipCard {
   background-color: transparent;
+  border-radius: 6px;
   width: 300px;
   height: 350px;
   border: none;
   perspective: 1000px;  
 }
+
+
+
 .cardInner {
+  background-image: url("https://www.pangea.global/wp-content/uploads/2022/08/8.30.2022_B5.jpg");
   border: none;  
   position: relative;
   width: 100%;
@@ -16,7 +19,7 @@
   transition: transform 0.9s ;
   transform-style: preserve-3d;
 }
-.flipCard:hover .cardInner {
+#flipCard:hover .cardInner {
   transform: rotateY(180deg);
 }
 
@@ -29,14 +32,11 @@
 }
 
 #card_front {
-    border: yellow 4px solid;
+    border: yellow 6px groove;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content:center;
-    background-color: #bbbbbb72;
-    
-
 }
 
 #card_front > .number{
@@ -62,7 +62,9 @@
 #card_front> h2{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 25px;
-  font-weight:600;
+  font-weight:700;
+  color: yellow;
+  text-shadow: 0 0 20px rgb(0, 0, 0), 0 0 10px red;
 }
 
 #card_back {
@@ -72,7 +74,6 @@
     align-items: center;
     justify-content:center;
     gap:3%;
-    background-color: rgba(255, 255, 255, 0.556);
     transform: rotateY(180deg);
 }
 
@@ -87,6 +88,8 @@
   text-shadow: 0 0 20px rgb(0, 0, 0), 0 0 10px red;
 }
 #card_back> h2{
+  color: rgb(253, 253, 13);
+  text-shadow: 0 0 25px rgb(0, 0, 0), 0 0 10px red;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 25px;
   font-weight:600;
@@ -96,4 +99,8 @@
     width: 175px;
     object-fit: cover;
     aspect-ratio: 1;
+    filter: drop-shadow(0.2rem 20px 0.5rem rgb(0, 0, 0));
+}
+.normal{
+  background-color: rgba(0, 0, 0, 0.489);
 }

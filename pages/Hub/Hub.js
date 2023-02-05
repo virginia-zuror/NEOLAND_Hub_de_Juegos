@@ -3,6 +3,7 @@ import { initContent } from "../../main";
 import { printTemplate as navButtonsTemplate } from "../../components/navbuttons/navButtons";
 
 
+
 //en .games-container va la grilla de botones de juego (grid)
 const Template = () => `
 <div class="hub-container">
@@ -12,7 +13,7 @@ const Template = () => `
             <button id="poke">PokeApi<img class='pokeball'src='https://cdn.pixabay.com/photo/2016/09/01/09/31/pokemon-1635610_960_720.png' alt='pokeball image'/></button>
         </figure>
         <figure class="game">
-            <button id="2">juego2</button>
+            <button id="catchKitty">Catch the Kitty!</button>
         </figure>
         <figure class="game">
             <button id="3">juego3</button>
@@ -28,6 +29,7 @@ const Template = () => `
 const addListeners =()=>{
     document.querySelector("#poke")
     .addEventListener("click", ()=>initContent("PokeAPI"));
+    document.querySelector("#catchKitty").addEventListener("click", ()=> initContent("Kitty"));
 }
 
 

@@ -36,7 +36,8 @@ export const printPokemons =(allCharactersPoke)=>{
 
     for (const pokemon of allCharactersPoke) {
         const flipCard = document.createElement("div");
-            flipCard.setAttribute("class", "flipCard");
+            flipCard.setAttribute("id", "flipCard");
+            
         const cardInner = document.createElement("div");
             cardInner.setAttribute("class", "cardInner");
         //creamos la parte frontal de las cartas
@@ -52,6 +53,7 @@ export const printPokemons =(allCharactersPoke)=>{
                 const p = document.createElement("p");
                 p.innerHTML = tp.type.name;
                 figureFront.appendChild(p);
+                flipCard.classList.add(tp.type.name)
                 }
         cardInner.appendChild(figureFront);
         
@@ -66,7 +68,7 @@ export const printPokemons =(allCharactersPoke)=>{
         <h2>Exp.points: ${pokemon.experience}</h2>
         <h2>Habilidades:</h2>`;
             for (const ab of pokemon.ability){//mapeamos el array de abilities
-                const p = document.createElement("p");
+                const p = document.createElement("p");               
                 p.innerHTML = ab.ability.name;
                 figureBack.appendChild(p);
             }
@@ -81,15 +83,15 @@ export const printPokemons =(allCharactersPoke)=>{
 
 export const filter = (value) => {
     console.log(value)
-    const filteredPokeName = allCharactersPoke.filter((pokemon) => pokemon.name.includes(value))
+    const filteredPokeName = allCharactersPoke.filter((pokemon) => pokemon.name.includes(value.toLowerCase()))
         printPokemons(filteredPokeName)
 }
 
 
 export const filterType = (value) =>{
-    
-    let filteredPokeType = []   
-    if(value != "select"){    
+    console.log(value)
+    const filteredPokeType = [];  
+    if(value != "default"){    
         for (const pokemon of  allCharactersPoke) {
             pokemon.type.forEach(element => {
                 if(element.type.name.includes(value)){      
@@ -100,9 +102,11 @@ export const filterType = (value) =>{
     printPokemons(filteredPokeType);  
     }else{
         printPokemons(allCharactersPoke);
-    }  
+    }   
 }
-        
+
+
+    
        
 
 

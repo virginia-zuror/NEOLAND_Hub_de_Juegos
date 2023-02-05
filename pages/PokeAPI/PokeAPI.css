@@ -1,4 +1,21 @@
 
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: gray;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    display: none;
+  }
+  .spinner{
+    display: flex;
+  }
+
 #poke-container{
     max-width: 90%;
     max-height: 90%;

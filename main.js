@@ -5,6 +5,8 @@ import { FooterContent } from "./components/footer/footer";
 import { printTemplate as LoginTemplate } from "./pages/Login/Login";
 import { printTemplate as HubTemplate } from "./pages/Hub/Hub";
 import { printTemplate as pokeApiTemplate } from "./pages/PokeAPI/PokeAPI";
+import { printTemplate as KittyTemplate } from './pages/Catch_the_kitten/Catch_the_kitten';
+
 
 
 export const initContent =(route)=>{
@@ -18,6 +20,9 @@ export const initContent =(route)=>{
             break;
         case "PokeAPI":
             pokeApiTemplate();
+            break;
+        case "Kitty":
+            KittyTemplate();
             break;
         default:
             LoginTemplate();

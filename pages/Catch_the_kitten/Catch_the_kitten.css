@@ -1,0 +1,14 @@
+#board{
+   position: fixed;
+   top:6rem;
+    width: 50%;
+    height: 50%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(150px,1fr));
+    grid-template-rows: repeat(4, minmax(150px, 1fr));
+}
+.square{
+    border: black 2px solid;
+    
+    background-color: brown;
+}
