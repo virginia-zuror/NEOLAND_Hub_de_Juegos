@@ -37,6 +37,14 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-shadow: 0 0 10px rgb(254, 5, 5);
 }
+.container > #picture{
+    border: red 2px solid;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    right:5%;
+    top:15%;
+}
 #word{
     display: flex;
     width: 300px;

@@ -19,6 +19,7 @@ const Template = ()=>`
             <div id="4" class="L"></div>
             <div id="5" class="L"></div>
         </div>
+        <div id="picture"></div>
             <button id="startHang">Reset</button>
         <div id="score"></div>
     </div>
@@ -27,20 +28,24 @@ const Template = ()=>`
 
 let counter = 9; 
 const letterIn =()=>{
+    document.querySelector("#picture").innerHTML=`<img src='/icons/hang9.png'/>`
     document.querySelector("#counterBack").innerHTML= `${counter}`;
-    
     let input = document.querySelector("#inputLetter");
     input.addEventListener("input", ()=>{
             let key = input.value;
             hangMan(key)})
 }
 
+
+
 let check =[];
 const hangMan =(key)=>{
+    
     
      const divs = document.querySelectorAll(".L");  
     const myWord = ['c', 'a', 'm', 'p', 'u', 's'];//palabra que juega
     
+
     if(myWord.includes(key) == false && counter>0){
            counter = counter -1; 
         }else if (myWord.includes(key) == true){
@@ -61,19 +66,29 @@ const hangMan =(key)=>{
         counter=9;
         document.querySelector("#counterBack").innerHTML= `${counter}`; 
         document.querySelector("#inputLetter").value = "";
+        picture();
         divs.forEach(div => {
             div.innerHTML= "";
         });
     })
 
 document.querySelector("#counterBack").innerHTML= `${counter}`; 
-
+picture();
 document.querySelector("#inputLetter").value = "";
 console.log(check)
    if(check.length === myWord.length){
     document.querySelector("#score").innerHTML= "Enhorabuena! has salvado a un asesino de la horca...";
    }
+
+   
 }//fin funcion
+
+const picture=()=>{
+    let counterForPicture= document.querySelector("#counterBack").textContent;
+    document.querySelector("#picture").innerHTML=`<img src='/icons/hang${counterForPicture}.png'/>`
+}
+ 
+
 
 
 
