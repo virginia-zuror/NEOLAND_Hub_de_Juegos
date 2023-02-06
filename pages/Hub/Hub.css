@@ -63,6 +63,23 @@
     -webkit-animation: tiembla 0.15s infinite;
     animation: tiembla 0.15s infinite;
   }
+  .hub-container >.games-container >.game > #catchKitty> img{
+    width: 30px;
+  }
+  .hub-container >.games-container >.game > #catchKitty> img:hover{
+    -webkit-animation: tiembla 0.15s infinite;
+    animation: tiembla 0.15s infinite;
+  }
+
+
+  .hub-container >.games-container >.game > #RollDice >img {
+    width: 30px;
+
+  }
+
+  .hub-container >.games-container >.game > #RollDice >img:hover{
+    -webkit-animation: tiembla 0.15s infinite;
+    animation: tiembla 0.15s infinite;}
   
   @-webkit-keyframes tiembla{
     0%  { -webkit-transform:rotateZ(-8deg); }
