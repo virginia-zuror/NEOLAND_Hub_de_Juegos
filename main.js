@@ -6,7 +6,7 @@ import { printTemplate as LoginTemplate } from "./pages/Login/Login";
 import { printTemplate as HubTemplate } from "./pages/Hub/Hub";
 import { printTemplate as pokeApiTemplate } from "./pages/PokeAPI/PokeAPI";
 import { printTemplate as KittyTemplate } from './pages/Catch_the_kitten/Catch_the_kitten';
-import { printTemplate as ToDoListTemplate } from "./pages/ToDoList/todolist";
+import { printTemplate as RollDiceTemplate } from "./pages/RollDice/RollDice";
 
 
 export const initContent =(route)=>{
@@ -24,8 +24,8 @@ export const initContent =(route)=>{
         case "Kitty":
             KittyTemplate();
             break;
-        case "ToDoList":
-                ToDoListTemplate();
+        case "RollDice":
+                RollDiceTemplate();
                 break;
         default:
             LoginTemplate();

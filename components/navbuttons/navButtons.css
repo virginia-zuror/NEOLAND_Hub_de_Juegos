@@ -3,7 +3,26 @@
     justify-content:left;
     align-items: center;
     z-index: 3;
+    min-width: fit-content;
     gap: 2rem;
     position: absolute;
+    left: 2%;
     bottom: 92.5%;
 }
+#start-btn , #logout-btn{
+    background-color: inherit;
+}
+@media (max-width: 850px) {
+    .nav_btns_container {
+      padding: 0 2rem;
+      
+      gap:0.2rem;
+      
+      
+    }
+    #start-btn, #logout-btn{
+      font-size: small;
+      width: 70px;
+    }
+  }
+

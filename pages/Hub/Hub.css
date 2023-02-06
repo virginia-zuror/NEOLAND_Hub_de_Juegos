@@ -1,6 +1,6 @@
 .hub-container{
     width: 100%;
-    margin-top: 10%;
+    margin-top: 5%;
     min-height: 55%;
     display: flex;
     flex-direction: column;
@@ -15,23 +15,26 @@
     color: yellow;
     font-weight: bold;
     font-size: 70px;
-    text-shadow: 0 0  10px black;
+    text-shadow: 0 0  10px black, 0 0 20px black, 0 0 20px red;
     
 
 }
 .hub-container >.games-container{
+    position: relative;
+    top: 5rem;
     display: grid;
     gap: 2rem;
-    grid-template-columns: repeat( 2, minmax(300px, 1fr));
-    grid-template-rows: repeat(2, minmax(200px, 1fr));
+    grid-template-columns: repeat( autofill, minmax(300px, 1fr));
+    grid-template-rows: repeat(autofill, minmax(300px, 1fr));
 
 }
 .hub-container >.games-container >.game{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 200px;
+    max-width: 200px;
     
 }
  .hub-container >.games-container >.game > button{
@@ -40,7 +43,7 @@
     justify-content: center;
     font-weight: 400;
     gap: 0.5rem;
-    width:150px;
+    min-width:200px;
     height: 50px;
     border: yellow 5px solid;
     box-shadow: 0 0 15px black;
@@ -65,4 +68,25 @@
     0%  { -webkit-transform:rotateZ(-8deg); }
     50% { -webkit-transform:rotateZ( 0deg);}
     100%{ -webkit-transform:rotateZ( 8deg); }
+  }
+  @media (max-width: 850px) {
+    .hub-container{
+        
+        flex-wrap: wrap;
+        padding: 0 0;
+        gap:1rem;
+        margin-top: 3%;
+        min-height: 55%;
+    }
+    .hub-container > h1{
+        width: 300px;
+        font-size: 30px;
+    }
+    .hub-container >.games-container {
+        width: 150px;
+        gap:1rem;
+        right: 1rem;
+        
+    }
+      
   }

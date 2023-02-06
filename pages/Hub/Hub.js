@@ -16,7 +16,7 @@ const Template = () => `
             <button id="catchKitty">Catch the Kitty!</button>
         </figure>
         <figure class="game">
-            <button id="toDoList">Block de Tareas</button>
+            <button id="RollDice">Roll the Dice</button>
         </figure>
         <figure class="game">
             <button id="4">juego4</button>
@@ -29,7 +29,7 @@ const Template = () => `
 const addListeners =()=>{
     document.querySelector("#poke").addEventListener("click", ()=>initContent("PokeAPI"));
     document.querySelector("#catchKitty").addEventListener("click", ()=> initContent("Kitty"));
-    document.querySelector("#toDoList").addEventListener("click", ()=> initContent("ToDoList"));
+    document.querySelector("#RollDice").addEventListener("click", ()=> initContent("RollDice"));
 }
 
 

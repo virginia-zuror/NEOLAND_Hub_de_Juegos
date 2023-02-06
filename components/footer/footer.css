@@ -1,5 +1,7 @@
 
 #footer-container {
+    height: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: row;
     gap:5rem;
@@ -10,7 +12,25 @@
     
     
 }
+@media (max-width: 850px) {
+  #footer-container {
+    width: 100vw; 
+    
+    gap:1.5rem;
+  }
+  #footer-container > h1{
+    position: relative;
+    right: 0rem;
+    font-size: 16px;
+  }
+  #footer-container > h2{
+    position: relative;
+    bottom: 2rem;
+    left: 0;
+    font-size: 16px;
+  }
 
+}
 
 #footer-container > h1{
     font-weight: 400;

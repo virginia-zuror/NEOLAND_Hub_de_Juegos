@@ -5,10 +5,28 @@ align-items: center;
 height: 100%;
 width: 100%;
 padding-right: 2rem;
+margin-top: 0.8rem;
 gap:2rem;
 
 }
 
 .nav-container > button{
-    background-color: rgba(240, 248, 255, 0.693);
+    background-color:inherit;
+    border: none;
+    transition: none;
+}
+.nav-container > button:hover{
+    box-shadow: none;
+    cursor: pointer;
+}
+#color-theme-btn > img{
+    width: 50px;
+}
+@media (max-width: 850px) {
+    .nav-container  {
+      position: relative;
+      left: 80%;
+      width: 50px;
+
+    }
 }
