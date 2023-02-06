@@ -28,7 +28,7 @@ const Template = ()=>`
 
 let counter = 9; 
 const letterIn =()=>{
-    document.querySelector("#picture").innerHTML=`<img src='/icons/hang9.png'/>`
+    document.querySelector("#picture").innerHTML=`<img src='/icons/hang9.png'/>`//inicia con imagen en blanco
     document.querySelector("#counterBack").innerHTML= `${counter}`;
     let input = document.querySelector("#inputLetter");
     input.addEventListener("input", ()=>{
@@ -73,7 +73,7 @@ const hangMan =(key)=>{
     })
 
 document.querySelector("#counterBack").innerHTML= `${counter}`; 
-picture();
+picture();//al cambiar los ptos cambia la foto
 document.querySelector("#inputLetter").value = "";
 console.log(check)
    if(check.length === myWord.length){
@@ -86,7 +86,7 @@ console.log(check)
 const picture=()=>{
     let counterForPicture= document.querySelector("#counterBack").textContent;
     document.querySelector("#picture").innerHTML=`<img src='/icons/hang${counterForPicture}.png'/>`
-}
+}//cambio de puntos provoca cambio de foto
  
 
 
