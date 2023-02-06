@@ -7,7 +7,7 @@ import { printTemplate as HubTemplate } from "./pages/Hub/Hub";
 import { printTemplate as pokeApiTemplate } from "./pages/PokeAPI/PokeAPI";
 import { printTemplate as KittyTemplate } from './pages/Catch_the_kitten/Catch_the_kitten';
 import { printTemplate as RollDiceTemplate } from "./pages/RollDice/RollDice";
-
+import { printTemplate as HangManTemplate } from "./pages/Ahorcado/Ahorcado";
 
 export const initContent =(route)=>{
     switch (route) {
@@ -26,6 +26,9 @@ export const initContent =(route)=>{
             break;
         case "RollDice":
                 RollDiceTemplate();
+                break;
+        case "HangMan":
+                HangManTemplate();
                 break;
         default:
             LoginTemplate();

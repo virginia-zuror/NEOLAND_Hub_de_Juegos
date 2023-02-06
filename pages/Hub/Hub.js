@@ -19,7 +19,7 @@ const Template = () => `
             <button id="RollDice">Roll the Dice <img src="https://cdn-icons-png.flaticon.com/512/3401/3401653.png" alt='dados'/></button>
         </figure>
         <figure class="game">
-            <button id="4">juego4</button>
+            <button id="HangMan">Hangman<img src="/icons/hangman.png" alt="icono juego ahorcado"/></button>
         </figure>
     </div>
 </div>
@@ -30,6 +30,7 @@ const addListeners =()=>{
     document.querySelector("#poke").addEventListener("click", ()=>initContent("PokeAPI"));
     document.querySelector("#catchKitty").addEventListener("click", ()=> initContent("Kitty"));
     document.querySelector("#RollDice").addEventListener("click", ()=> initContent("RollDice"));
+    document.querySelector("#HangMan").addEventListener("click", ()=> initContent("HangMan"));
 }
 
 

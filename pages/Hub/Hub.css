@@ -35,7 +35,7 @@
     align-items: center;
     justify-content: center;
     max-width: 200px;
-    
+    margin-right:7rem ;
 }
  .hub-container >.games-container >.game > button{
     display: flex;
@@ -48,6 +48,7 @@
     border: yellow 5px solid;
     box-shadow: 0 0 15px black;
     background-color: rgba(240, 248, 255, 0.704);
+    
     
     
 } 
@@ -80,6 +81,10 @@
   .hub-container >.games-container >.game > #RollDice >img:hover{
     -webkit-animation: tiembla 0.15s infinite;
     animation: tiembla 0.15s infinite;}
+
+    .hub-container >.games-container >.game > #HangMan >img{
+      width: 35px;
+    }
   
   @-webkit-keyframes tiembla{
     0%  { -webkit-transform:rotateZ(-8deg); }
