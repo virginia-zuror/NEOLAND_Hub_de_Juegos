@@ -22,9 +22,9 @@ let posibilities = 6;
 const diceResult =(posibilities)=>{
 
     document.querySelector("#resultGame").innerHTML = "";
-    let resultMachine = Math.round(Math.random(1,posibilities)*posibilities);
+    let resultMachine = Math.round(Math.random()*(posibilities-1)+1);
 //el jugador
-    let resultPlayer = Math.round(Math.random(1,posibilities)*posibilities);
+    let resultPlayer = Math.round(Math.random()*(posibilities-1)+1);
     console.log(resultMachine)
     console.log(resultPlayer);
 

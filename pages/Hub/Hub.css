@@ -44,7 +44,7 @@
     font-weight: 400;
     gap: 0.5rem;
     min-width:200px;
-    height: 50px;
+    height: 52px;
     border: yellow 5px solid;
     box-shadow: 0 0 15px black;
     background-color: rgba(240, 248, 255, 0.704);
@@ -85,6 +85,10 @@
     .hub-container >.games-container >.game > #HangMan >img{
       width: 35px;
     }
+
+    .hub-container >.games-container >.game > #HangMan >img:hover{
+      -webkit-animation: tiembla 0.15s infinite;
+      animation: tiembla 0.15s infinite;}
   
   @-webkit-keyframes tiembla{
     0%  { -webkit-transform:rotateZ(-8deg); }

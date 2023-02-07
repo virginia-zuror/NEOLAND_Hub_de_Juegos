@@ -5,49 +5,28 @@ import { printTemplate as navButtonsTemplate} from "../../components/navbuttons/
 
 
 const Template = ()=>`
-<h1 class="title_cat">¡Atrapa al gatito!</h1>
-<div id="board">
-    <div id="1" class="place">
+<div class="gameCat">
+    <h1 class="title_cat">¡Atrapa al gatito!</h1>
+    <div id="board">
+        <div id="1" class="place"></div>
+        <div id="2" class="place"></div>
+        <div id="3" class="place"></div>
+        <div id="4" class="place"></div>
+        <div id="5" class="place"></div>
+        <div id="6" class="place"></div>
+        <div id="7" class="place"></div>
+        <div id="8" class="place"></div>
+        <div id="9" class="place"></div>
+        <div id="10" class="place"></div>
+        <div id="11" class="place"></div>
+        <div id="12" class="place"></div>
+    </div>
+    <div id="controlBtns">
+        <div class="score">0 Puntos</div>
+        <button id="start" class="startBtn">Start</button>
+        <div id="time"></div>
+    </div>
     
-    </div>
-    <div id="2" class="place">
-    
-    </div>
-    <div id="3" class="place">
-    
-    </div>
-    <div id="4" class="place">
-    
-    </div>
-    <div id="5" class="place">
-    
-    </div>
-    <div id="6" class="place">
-    
-    </div>
-    <div id="7" class="place">
-    
-    </div>
-    <div id="8" class="place">
-    
-    </div>
-    <div id="9" class="place">
-   
-    </div>
-    <div id="10" class="place">
-    
-    </div>
-    <div id="11" class="place">
-   
-    </div>
-    <div id="12" class="place">
-    
-    </div>
-<div id="controlBtns">
-<div class="score">0 Puntos</div>
-<button id="start" class="startBtn">Start</button>
-<div id="time"></div>
-</div>
 </div>`
 
 export const gameFunctions =()=>{

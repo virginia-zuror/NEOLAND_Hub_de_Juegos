@@ -13,13 +13,13 @@ const Template = () => `
             <button id="poke">PokeApi<img class='pokeball'src='https://cdn.pixabay.com/photo/2016/09/01/09/31/pokemon-1635610_960_720.png' alt='pokeball image'/></button>
         </figure>
         <figure class="game">
-            <button id="catchKitty">Catch the Kitty!<img src="https://cdn-icons-png.flaticon.com/512/1067/1067809.png" alt='gatito'/></button>
+            <button id="catchKitty">Atrapa al Gatito!<img src="https://cdn-icons-png.flaticon.com/512/1067/1067809.png" alt='gatito'/></button>
         </figure>
         <figure class="game">
             <button id="RollDice">Roll the Dice <img src="https://cdn-icons-png.flaticon.com/512/3401/3401653.png" alt='dados'/></button>
         </figure>
         <figure class="game">
-            <button id="HangMan">Hangman<img src="/icons/hangman.png" alt="icono juego ahorcado"/></button>
+            <button id="HangMan">Juego del Ahorcado<img src="/icons/hangman.png" alt="icono juego ahorcado"/></button>
         </figure>
     </div>
 </div>

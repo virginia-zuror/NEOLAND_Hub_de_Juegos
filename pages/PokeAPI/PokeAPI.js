@@ -12,6 +12,7 @@ import { Template as selectorTypeTemplate } from "../../components/selectorType/
 
 const Template = () =>`
 <div id="poke-container">
+    <h1>PokeApi</h1>
     <div class="searchers">
         <div id="selectorType"></div>
         <div id="filter_poke">

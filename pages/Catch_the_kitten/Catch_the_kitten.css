@@ -1,31 +1,41 @@
-.title_cat{
+.gameCat{
+    position: absolute;
+    top:10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.gameCat > .title_cat{
     color: rgb(255, 255, 255);
     font-size: 30px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 2px;
     text-shadow: 0 0 15px black, 0 0 15px red ;
     position: absolute;
-    margin-bottom: 40%;
+    object-position: top;
+    top: 2%;
+    left:30%;
 }
 
-#board{   
+.gameCat > #board{   
     position: relative;
-    top:4rem;
-    min-width:50%;
-    height: fit-content;
+    margin-top: 10%;  
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat( 4, minmax(100px,150px));
+    grid-template-columns: repeat( 4, minmax(150px,150px));
      grid-template-rows: repeat(3,minmax(100px,150px));
+     
     
    
 }
 @media (max-width: 850px) {
-    .title_cat{
+    .gameCat > .title_cat{
         top: 8rem;
     }
     
-    #board {
+    .gameCat > #board {
       width: 100%; 
       height: 100%;  
       margin:2rem;
@@ -37,7 +47,7 @@
   }
     
 
-.place{
+.gameCat > #board >.place{
     box-shadow: 0 0 20px black;
     overflow: hidden;
     border: 2px rgba(0, 0, 0, 0.499) solid;
@@ -66,38 +76,43 @@
     }
 }
 
-#controlBtns{
-   position: relative;
-   top: 2rem;
-    right:17rem ;
-    height: 50%;
-    width: 90vw;
-    display: flex;
+.gameCat > #controlBtns{
+   position: fixed;
+   bottom: 8%;
+   display: flex;
+   align-items: center;
    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap:5rem;
-   
+   justify-content: space-around;
+   gap: 1rem; 
 }
 
-@media (max-width: 700px) {
-    #controlBtns{
-        right: 1rem;
-        flex-direction: column;
-        height: auto;
+@media (max-width: 850px) {
+    .gameCat >.title_cat{
+        top:1%;
+    }
+    .gameCat > #board {
+        grid-template-columns: repeat( 4, minmax(50px,120px));
+        grid-template-rows: repeat(3,minmax(50px,120px));
+    }
+   .gameCat > #controlBtns{
+        
+        flex-direction: row;
+        bottom: 15%;
+        
         gap: 0.8rem;
     }
     .kitty{
         background-position: center;
     background-size: cover;   }
 }
-.startBtn{
+.gameCat > #controlBtns>.startBtn{
     color:inherit;
     background-color: inherit;
     font-size: 30px;
+    
 }
 
-.score , #time{
+.gameCat > #controlBtns >.score , .gameCat > #controlBtns >#time{
     font-size: 25px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;

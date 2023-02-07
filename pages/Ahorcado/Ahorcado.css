@@ -13,13 +13,14 @@
 }
 .container >h1{
     
-    font-size: 40px;
+    font-size: 30px;
     position: absolute;
     top:4%;
-    
-    color: aliceblue;
+    letter-spacing: 2px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(255, 255, 255);
     font-weight: 600;
-    text-shadow: 0 0 30px black, 0 0 20px red;
+    text-shadow: 0 0 15px black, 0 0 15px red;
     
 }
 

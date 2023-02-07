@@ -1,5 +1,5 @@
 
-.loading {
+/* .loading {
     position: fixed;
     top: 0;
     left: 0;
@@ -11,7 +11,7 @@
     align-items: center;
     font-size: 2rem;
     display: none;
-  }
+  } */
 
 #poke-container{
     max-width: 100vw;
@@ -27,6 +27,16 @@
     margin-left: 1rem;
     margin-right: 1rem; 
 }
+#poke-container > h1{
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px black, 0 0 15px red ;
+    top:11%;
+    margin-bottom: 5%;
+}
 
 .searchers{
     min-width: 100%;
@@ -41,8 +51,14 @@
     #poke-container{
         margin-top: 2rem;
     }
+    #poke-container>h1{
+        top:10%;
+        font-size: 28px;
+    }
     
     .searchers {
+        position: absolute;
+        top: 15%;
       padding: 0 2rem;
       flex-wrap: wrap;
     
