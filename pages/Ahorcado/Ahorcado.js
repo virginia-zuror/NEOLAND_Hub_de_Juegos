@@ -58,7 +58,7 @@ const hangMan =(key)=>{
             }
     }
     if(counter == 0){
-        document.querySelector("#score").innerHTML=`AHORCADO! gracias por contribuir a la justicia...`}
+        document.querySelector("#score").innerHTML=`AHORCADO! gracias por nada...`}
     
     document.querySelector("#startHang").addEventListener("click", ()=>{
         document.querySelector("#score").innerHTML= "";
@@ -76,8 +76,8 @@ document.querySelector("#counterBack").innerHTML= `${counter}`;
 picture();//al cambiar los ptos cambia la foto
 document.querySelector("#inputLetter").value = "";
 console.log(check)
-   if(check.length === myWord.length){
-    document.querySelector("#score").innerHTML= "Enhorabuena! has salvado a un asesino de la horca...";
+   if(check.length === myWord.length){//si tienes las 6letras y no has perdido ganas
+    document.querySelector("#score").innerHTML= "ME HAS SALVADO! ya puedes seguir con tus cosas...";
    }
 
    
