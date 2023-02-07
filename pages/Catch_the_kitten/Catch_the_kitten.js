@@ -65,7 +65,7 @@ places.forEach(place => {
         if (time == 0) { 
             clearInterval(initGame);//al llegar a cero el tiempo cortamos el identificador del setinterval
             setTimeout(() => {//el alert empieza a contar al inicio del juego pero tarda 10seg en sacar el alert, que es lo qu epodemos jugar
-                alert(`Fin de la partida, has conseguido ${score} puntos!! refresca la página para otra partida!`);
+                alert(`Fin de la partida, has conseguido ${score} puntos!!`);
                 time=10;
                 startBtn.disabled=false;
             }, 100);
