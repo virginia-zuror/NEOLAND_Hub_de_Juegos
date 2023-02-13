@@ -10,11 +10,11 @@
 }
 #main_container > h1{
     position: fixed;
-    color: rgb(255, 255, 255);
-    font-size: 30px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: var(--primary);
+    font-size: 35px;
+    font-weight: 900;
     letter-spacing: 2px;
-    text-shadow: 0 0 15px black, 0 0 15px red ;
+   
     top:20%;
     margin-bottom: 5%;
     
@@ -67,7 +67,8 @@
 
 #dice_machine > p , #dice_player > p {
     text-align: center;
-    font-size: 20px;
+    font-size: 30px;
+    font-weight: 700;
     margin-top: 1rem;
 }
 #dice_machine > p{
@@ -87,8 +88,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 30px;
     font-weight: 500;
-    color: red;
-    text-shadow: 0 0 20px black, 0 0 10px black;
+    color: var(--primary);
 }
 #throw{
     position: fixed;

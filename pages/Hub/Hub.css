@@ -11,11 +11,10 @@
 }
 .hub-container > h1{
     margin-right: 7%;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: yellow;
-    font-weight: bold;
+    color: var(--primary);
+    font-weight:700;
     font-size: 70px;
-    text-shadow: 0 0  10px black, 0 0 20px black, 0 0 20px red;
+    
     
 
 }
@@ -41,13 +40,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 400;
+    font-weight: 500;
     gap: 0.5rem;
     min-width:200px;
     height: 52px;
-    border: yellow 5px solid;
-    box-shadow: 0 0 15px black;
-    background-color: rgba(240, 248, 255, 0.704);
+    border:var(--higligth) 5px solid;
+    box-shadow: 0 0 25px black;
+    background-color: var(--primary);
     
     
     

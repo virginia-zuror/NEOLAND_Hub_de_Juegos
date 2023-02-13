@@ -2,17 +2,20 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    gap: 5rem;
+    gap: 3rem;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 1rem;
+    position: absolute;
+    bottom: 50%;
+    
 }
 
 .login > h2 {
-    font-size: 30px;
-    font-weight: 700;
-    color: yellow;
-    text-shadow: 0 0 30px black;
+    font-size: 45px;
+    font-weight: 900;
+    color: var(--primary);
+    
     margin-top: 45%;
 }
 .login > form{
@@ -26,10 +29,11 @@
     border: none;
     border-bottom: solid 3px yellow;
     caret-color: yellow;
-    color: rgb(255, 0, 0);
-    text-shadow: 0 0 5px black;
-    height: 30px;
-    font-size: 30px;
+    color: var(--primary);
+    height: 45px;
+    font-size: 40px;
+    line-height-step: 12px;
+    font-weight: 700;
     
 }
 
@@ -37,12 +41,7 @@
     outline: none;
     
 }
-.login > form > .login-btn {
-    border: yellow solid 3px;
-    color: rgb(0, 0, 0);
-    font-size: 25px;
-    background-color: rgba(240, 248, 255, 0.677);
-}
+
 
 @media (max-width:800px){
     .login{

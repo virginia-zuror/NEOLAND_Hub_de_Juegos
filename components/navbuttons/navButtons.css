@@ -9,9 +9,7 @@
     left: 2%;
     bottom: 92.5%;
 }
-#start-btn , #logout-btn{
-    background-color: inherit;
-}
+
 @media (max-width: 850px) {
     .nav_btns_container {
       padding: 0 2rem;

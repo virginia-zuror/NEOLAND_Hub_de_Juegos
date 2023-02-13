@@ -13,14 +13,14 @@
 }
 .container >h1{
     
-    font-size: 30px;
+    font-size: 35px;
     position: absolute;
     top:4%;
     letter-spacing: 2px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: rgb(255, 255, 255);
-    font-weight: 600;
-    text-shadow: 0 0 15px black, 0 0 15px red;
+    
+    color: var(--primary);
+    font-weight: 900;
+    
     
 }
 
@@ -41,7 +41,7 @@
     top:25%;
     font-size: 25px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-shadow: 0 0 10px rgb(254, 5, 5);
+    
 }
 .container > #picture{
     
@@ -74,8 +74,8 @@
 
 .L{
     border: none;
-    border-bottom: red solid 4px;
-    box-shadow: 0 0 30px black, 0 0 20px red;
+    border-bottom: var(--higligth) solid 4px;
+    
     width: 50px;
     height: 50px;
     font-size: 45px;
@@ -89,7 +89,7 @@
     right:38%;
     top: 60%;
     font-size: 30px;
-    text-shadow: 0 0 30px black;
+    
 
 }
 #counterBack{
@@ -102,8 +102,7 @@
     left: 10%;
     top: 35%;
     font-size: 35px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-shadow: 0 0 10px rgb(254, 5, 5);
+    font-weight: 800;
 
 }
 #startHang{
